@@ -1,0 +1,100 @@
+#waybar {
+    background: transparent;
+    color: white;
+    font-family: "FiraCode Nerd Font Propo";
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: transparent;
+}
+
+#workspaces button.urgent {
+    color: red;
+}
+
+#workspaces button.active label {
+    font-size: 12px;
+    margin: 4px 0px 4px 0px;
+    background-image: linear-gradient(
+        135deg, 
+        #F38BA8,
+     	#A6E3A1,
+        #F9E2AF,
+        #89B4FA,
+     	#F5C2E7,
+        #94E2D5,
+        #F38BA8,
+     	#94E2D5,
+        #F5C2E7,
+        #89B4FA,
+     	#F9E2AF,
+        #A6E3A1,
+     	#F38BA8
+    );
+    background-size: 800% 800%;
+    animation: active 120s linear infinite;
+    transition: ease-in-out;
+    border-radius: 50%;
+}
+
+@keyframes active {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 800% 800%;
+    }
+}
+
+#bluetooth.connected {
+    color: blue;
+}
+
+#battery.warning, #network.linked {
+    color: yellow;
+}
+
+#battery.critical, #wireplumber.muted {
+    color: red;
+}
+
+#custom-sep {
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    font-weight: 200;
+}
+
+#custom-arch, #clock, #backlight, #bluetooth, #network, #battery, #wireplumber, #tray {
+    margin: 10px 0px 10px 0px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 1;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#clock {
+    margin: 10px 0px 0px 0px;
+}
+
+#tray > widget > image {
+    margin: 10px 0 10px 0;
+}
+
+#custom-cpu, #custom-ram, #workspaces {
+    margin: 10px 0px 10px 0px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: black;
+    opacity: 1;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
